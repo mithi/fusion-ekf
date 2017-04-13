@@ -4,10 +4,11 @@
 #include "../src/Eigen/Dense"
 #include <stdlib.h>
 #include <iostream>
+#include "tools.h"
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
-using namespace std; 
+using namespace std;
 
 enum class DataPointType{
   LIDAR, RADAR, STATE
@@ -16,16 +17,19 @@ enum class DataPointType{
 class DataPoint{
 
   private:
-    long timestamp;
-    bool is_initialized;
-    DataPointType data_type; 
+    long long timestamp;
+    bool initialized;
+    DataPointType data_type;
     VectorXd raw;
-  
-  public: 
+
+  public:
     DataPoint();
     DataPoint(const long timestamp, const DataPointType data_type, const VectorXd raw);
     void set(long timestamp, const DataPointType data_type, const VectorXd raw);
     VectorXd get() const;
+    VectorXd get_state() const;
+    DataPointType get_type() const;
+    long long get_timestamp() const;
     void print() const;
 };
 
