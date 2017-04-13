@@ -126,5 +126,9 @@ int main(int argc, char* argv[]) {
    VectorXd RMSE = calculate_RMSE(estimations, ground_truths);
    cout << RMSE << endl;
    
+  /*******************************************************************
+   * PRINT TO CONSOLE IN A NICE FORMAT FOR DEBUGGING
+   *******************************************************************/
+   //print_EKF_data(RMSE, estimations, ground_truths, all_sensor_data);
 
 
