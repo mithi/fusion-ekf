@@ -88,18 +88,37 @@ int main(int argc, char* argv[]) {
   }
 
   /*******************************************************************
+   * USE DATA AND FUSIONEKF FOR STATE ESTIMATIONS
    *******************************************************************/
-  return 0;
-}
+   FusionEKF fusionEKF;
 
+   vector<VectorXd> estimations;
+   vector<VectorXd> ground_truths;
 
+  for (int k = 0; k < all_sensor_data.size(); k++){
 
+    fusionEKF.process(all_sensor_data[k]);
 
+    VectorXd prediction = fusionEKF.get();
+    VectorXd measurement = all_sensor_data[k].get_state();
+    VectorXd truth =  all_truth_data[k].get();
 
+    out_file << prediction(0) << "\t";
+    out_file << prediction(1) << "\t";
+    out_file << prediction(2) << "\t";
+    out_file << prediction(3) << "\t";
 
+    out_file << measurement(0) << "\t";
+    out_file << measurement(1) << "\t";
 
+    out_file << truth(0) << "\t";
+    out_file << truth(1) << "\t";
+    out_file << truth(2) << "\t";
+    out_file << truth(3) << "\t" << endl;
 
-
+    estimations.push_back(prediction);
+    ground_truths.push_back(truth);
+  }
 
 
 
