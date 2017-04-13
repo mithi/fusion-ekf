@@ -18,7 +18,7 @@ void print_data_points(vector<DataPoint> all_sensor_data, vector<DataPoint> all_
 int main(int argc, char* argv[]) {
 
   /*******************************************************************
-   * CHECK IF CORRECTLY EXECUTED
+   * CHECK IF CORRECTLY EXECUTED BY USER
    *******************************************************************/
 
   check_arguments(argc, argv);
@@ -38,8 +38,8 @@ int main(int argc, char* argv[]) {
   vector<DataPoint> all_sensor_data;
   vector<DataPoint> all_truth_data;
 
-  float val1, val2, val3;
-  float x, y, vx, vy;  
+  double val1, val2, val3;
+  double x, y, vx, vy;  
   long timestamp;
   string sensor_id;
 
@@ -87,12 +87,12 @@ int main(int argc, char* argv[]) {
 
     all_sensor_data.push_back(sensor_data);
     all_truth_data.push_back(truth_data);
-    
+
   }
   /*******************************************************************
    * PRINT ALL DATA POINTS
    *******************************************************************/
-  print_data_points(all_sensor_data, all_truth_data);
+  //print_data_points(all_sensor_data, all_truth_data);
 
 
   /*******************************************************************
