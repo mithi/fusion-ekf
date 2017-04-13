@@ -1,11 +1,9 @@
 #include "kalmanfilter.h"
 
-KalmanFilter::KalmanFilter(int n){
+void KalmanFilter::start(int n, VectorXd x, MatrixXd P, MatrixXd F, MatrixXd Q){
+
   this->n = n;
   this->I = MatrixXd::Identity(n, n);
-}
-
-void KalmanFilter::start(VectorXd &x, MatrixXd &P, MatrixXd &F, MatrixXd &Q){
   this->x = x;
   this->P = P;
   this->F = F;
@@ -21,7 +19,7 @@ void KalmanFilter::updateF(double dt){
   this->F(1, 3) = dt;
 }
 
-VectorXd KalmanFilter::getx() const{
+VectorXd KalmanFilter::get() const{
   return this->x;
 }
 
@@ -30,9 +28,8 @@ void KalmanFilter::predict(){
   this->P = this->F * this->P * this->F.transpose() + this->Q;
 }
 
-void KalmanFilter::update(
-  const VectorXd &z, const MatrixXd &H, const VectorXd Hx, const MatrixXd R){
-  
+void KalmanFilter::update(const VectorXd &z, const MatrixXd &H, const VectorXd &Hx, const MatrixXd &R){
+
   MatrixXd PHt = this->P * H.transpose();
   VectorXd y = z - Hx;
   MatrixXd S = H * PHt + R;
@@ -41,4 +38,3 @@ void KalmanFilter::update(
   this->x = this->x + K * y;
   this->P = (this->I - K * H) * this->P;
 }
-
