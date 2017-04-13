@@ -25,7 +25,7 @@ void DataPoint::print() const{
     cout << this->raw << endl;
 
   } else {
-    cout << "Datapoint is not initialized" << endl;
+    cout << "DataPoint is not initialized." << endl;
   }
 }
 
