@@ -6,14 +6,16 @@
 #include "Eigen/Dense"
 #include "usagecheck.h"
 #include "datapoint.h"
+#include "tools.h"
+#include "fusionekf.h"
 
-using Eigen::MatrixXd;
-using Eigen::VectorXd;
 using namespace std;
 using std::vector;
 
 void test_datapoints();
 void print_data_points(vector<DataPoint> all_sensor_data, vector<DataPoint> all_truth_data);
+using Eigen::MatrixXd;
+using Eigen::VectorXd;
 
 int main(int argc, char* argv[]) {
 
