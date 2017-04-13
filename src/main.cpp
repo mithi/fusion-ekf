@@ -1,14 +1,16 @@
-
 #include <fstream>
 #include <iostream>
+#include <sstream>
+#include <vector>
 #include <stdlib.h>
+#include "Eigen/Dense"
 #include "usagecheck.h"
 #include "datapoint.h"
-#include "Eigen/Dense"
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 using namespace std;
+using std::vector;
 
 void test_datapoints();
 
