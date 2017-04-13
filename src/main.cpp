@@ -31,6 +31,62 @@ int main(int argc, char* argv[]) {
   check_files(in_file, in_filename, out_file, out_filename);
 
   /*******************************************************************
+   * READ DATA FROM FILE AND STORE IN MEMORY
+   *******************************************************************/
+  
+  vector<DataPoint> all_sensor_data;
+  vector<DataPoint> all_truth_data;
+
+  float val1, val2, val3;
+  float x, y, vx, vy;  
+  long timestamp;
+  string sensor_id;
+
+  string line;
+
+  while(getline(in_file, line)){
+
+    istringstream iss(line);
+    DataPoint sensor_data;
+    DataPoint truth_data;
+
+    iss >> sensor_id;
+
+    if (sensor_id.compare("L") == 0){
+      
+      iss >> val1;
+      iss >> val2;
+      iss >> timestamp;
+
+      VectorXd lidar_vec(2);
+      lidar_vec << val1, val2;
+      sensor_data.set(timestamp, DataPointType::LIDAR, lidar_vec);
+
+    } else if (sensor_id.compare("R") == 0){
+
+      iss >> val1;
+      iss >> val2;
+      iss >> val3;
+      iss >> timestamp;
+
+      VectorXd radar_vec(3);
+      radar_vec << val1, val2, val3;
+      sensor_data.set(timestamp, DataPointType::RADAR, radar_vec);
+
+    }
+
+    iss >> x;
+    iss >> y;
+    iss >> vx;
+    iss >> vy;
+
+    VectorXd truth_vec(4);
+    truth_vec << x, y, vx, vy;
+    truth_data.set(timestamp, DataPointType::STATE, truth_vec);
+
+    all_sensor_data.push_back(sensor_data);
+    all_truth_data.push_back(truth_data);
+  }
    * DATAPOINT SAMPLE USAGE
    *******************************************************************/
   test_datapoints();
