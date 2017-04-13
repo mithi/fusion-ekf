@@ -87,6 +87,7 @@ int main(int argc, char* argv[]) {
 
     all_sensor_data.push_back(sensor_data);
     all_truth_data.push_back(truth_data);
+    
   }
   /*******************************************************************
    * PRINT ALL DATA POINTS
@@ -94,6 +95,7 @@ int main(int argc, char* argv[]) {
   print_data_points(all_sensor_data, all_truth_data);
 
 
+  /*******************************************************************
    * DATAPOINT SAMPLE USAGE
    *******************************************************************/
   //test_datapoints()
