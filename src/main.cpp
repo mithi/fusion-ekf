@@ -114,7 +114,7 @@ int main(int argc, char* argv[]) {
     out_file << truth(0) << "\t";
     out_file << truth(1) << "\t";
     out_file << truth(2) << "\t";
-    out_file << truth(3) << "\t" << endl;
+    out_file << truth(3) << "\n";
 
     estimations.push_back(prediction);
     ground_truths.push_back(truth);
