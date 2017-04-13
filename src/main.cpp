@@ -19,7 +19,6 @@ int main(int argc, char* argv[]) {
   /*******************************************************************
    * CHECK IF CORRECTLY EXECUTED BY USER
    *******************************************************************/
-
   check_arguments(argc, argv);
 
   string in_filename = argv[1];
@@ -33,13 +32,12 @@ int main(int argc, char* argv[]) {
   /*******************************************************************
    * READ DATA FROM FILE AND STORE IN MEMORY
    *******************************************************************/
-  
   vector<DataPoint> all_sensor_data;
   vector<DataPoint> all_truth_data;
 
   double val1, val2, val3;
-  double x, y, vx, vy;  
-  long timestamp;
+  double x, y, vx, vy;
+  long long timestamp;
   string sensor_id;
 
   string line;
@@ -53,7 +51,7 @@ int main(int argc, char* argv[]) {
     iss >> sensor_id;
 
     if (sensor_id.compare("L") == 0){
-      
+
       iss >> val1;
       iss >> val2;
       iss >> timestamp;
