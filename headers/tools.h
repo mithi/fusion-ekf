@@ -17,6 +17,6 @@ using Eigen::VectorXd;
 VectorXd convert_cartesian_to_polar(const VectorXd v);
 VectorXd convert_polar_to_cartesian(const VectorXd v);
 MatrixXd calculate_jacobian(const VectorXd &v);
-VectorXd calculate_RMSE(const vector<VectorXd> &estimations, const vector<VectorXd> &ground_truth);
+VectorXd calculate_RMSE(const vector<VectorXd> &estimations, const vector<VectorXd> &ground_truths);
 
 #endif /* TOOLS_H_ */

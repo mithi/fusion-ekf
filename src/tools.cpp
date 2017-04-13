@@ -74,14 +74,14 @@ MatrixXd calculate_jacobian(const VectorXd &v){
 }
 
 
-VectorXd calculate_RMSE(const vector<VectorXd> &estimations, const vector<VectorXd> &ground_truth){
+VectorXd calculate_RMSE(const vector<VectorXd> &estimations, const vector<VectorXd> &ground_truths){
 
   VectorXd rmse(4);
   rmse << 0.0, 0.0, 0.0, 0.0;
 
   for (int k = 0; k < estimations.size(); k++){
 
-    VectorXd diff = estimations[k] - ground_truth[k];
+    VectorXd diff = estimations[k] - ground_truths[k];
     diff = diff.array() * diff.array();
     rmse += diff;
   }
