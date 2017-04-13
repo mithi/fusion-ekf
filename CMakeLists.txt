@@ -7,6 +7,7 @@ include_directories(headers)
 
 set(SOURCES src/main.cpp 
             src/usagecheck.cpp
-            src/datapoint.cpp)
+            src/datapoint.cpp
+            src/kalmanfilter.cpp)
 
 add_executable(ExtendedKF ${SOURCES})
