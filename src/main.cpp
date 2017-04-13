@@ -131,4 +131,11 @@ int main(int argc, char* argv[]) {
    *******************************************************************/
    //print_EKF_data(RMSE, estimations, ground_truths, all_sensor_data);
 
+  /*******************************************************************
+   * CLOSE FILES
+   *******************************************************************/
+  if (out_file.is_open()) { out_file.close();}
+  if (in_file.is_open()) { in_file.close();}
 
+  return 0;
+}
