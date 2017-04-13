@@ -20,7 +20,7 @@ void DataPoint::print() const{
   if (this->is_initialized){
 
     cout << "Timestamp: " << this->timestamp << endl;
-    cout << "Sensor ID: " << static_cast<int>(this->data_type) << " (1:LIDAR | 2:RADAR | 3:STATE)" << endl;
+    cout << "Sensor ID: " << static_cast<int>(this->data_type) << " (LIDAR = 0 | RADAR = 1 | STATE = 2)" << endl;
     cout << "Raw Data: " << endl;
     cout << this->raw << endl;
 
