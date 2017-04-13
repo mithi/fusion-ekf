@@ -134,8 +134,8 @@ int main(int argc, char* argv[]) {
   /*******************************************************************
    * CLOSE FILES
    *******************************************************************/
-  if (out_file.is_open()) { out_file.close();}
-  if (in_file.is_open()) { in_file.close();}
+  if (out_file.is_open()) { out_file.close(); }
+  if (in_file.is_open()) { in_file.close(); }
 
   return 0;
 }
