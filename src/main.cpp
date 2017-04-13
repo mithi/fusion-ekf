@@ -13,6 +13,7 @@ using namespace std;
 using std::vector;
 
 void test_datapoints();
+void print_data_points(vector<DataPoint> all_sensor_data, vector<DataPoint> all_truth_data);
 
 int main(int argc, char* argv[]) {
 
@@ -87,6 +88,11 @@ int main(int argc, char* argv[]) {
     all_sensor_data.push_back(sensor_data);
     all_truth_data.push_back(truth_data);
   }
+  /*******************************************************************
+   * PRINT ALL DATA POINTS
+   *******************************************************************/
+  print_data_points(all_sensor_data, all_truth_data);
+
 
    * DATAPOINT SAMPLE USAGE
    *******************************************************************/
@@ -98,7 +104,22 @@ int main(int argc, char* argv[]) {
   return 0;
 }
 
-void test_datapoints(){
+void print_data_points(vector<DataPoint> all_sensor_data, vector<DataPoint> all_truth_data) {
+
+  for (long int k = 0; k < all_sensor_data.size(); k++){
+      
+    cout << "======================================" << endl;
+
+    cout << "SENSOR DATA:" << k << endl;
+    all_sensor_data[k].print();
+
+    cout << "TRUTH DATA:" << k << endl;
+    all_truth_data[k].print();
+  }
+}
+
+
+void test_datapoints() {
 
   VectorXd lidar_v(2);
   lidar_v << 1.2, 2.5; 
