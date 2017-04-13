@@ -11,9 +11,6 @@
 
 using namespace std;
 using std::vector;
-
-void test_datapoints();
-void print_data_points(vector<DataPoint> all_sensor_data, vector<DataPoint> all_truth_data);
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
@@ -91,68 +88,20 @@ int main(int argc, char* argv[]) {
     all_truth_data.push_back(truth_data);
 
   }
+
   /*******************************************************************
-   * PRINT ALL DATA POINTS
    *******************************************************************/
-  //print_data_points(all_sensor_data, all_truth_data);
-
-
-  /*******************************************************************
-   * DATAPOINT SAMPLE USAGE
-   *******************************************************************/
-  //test_datapoints()
-
-  /*******************************************************************
-   * END
-   *******************************************************************/  
   return 0;
 }
 
-void print_data_points(vector<DataPoint> all_sensor_data, vector<DataPoint> all_truth_data) {
-
-  for (long int k = 0; k < all_sensor_data.size(); k++){
-      
-    cout << "======================================" << endl;
-
-    cout << "SENSOR DATA:" << k << endl;
-    all_sensor_data[k].print();
-
-    cout << "TRUTH DATA:" << k << endl;
-    all_truth_data[k].print();
-  }
-}
 
 
-void test_datapoints() {
 
-  VectorXd lidar_v(2);
-  lidar_v << 1.2, 2.5; 
-  DataPoint lidar_data(1234, DataPointType::LIDAR, lidar_v);
 
-  VectorXd radar_v(3);
-  radar_v << 1.2, 2.5, 4.3; 
-  DataPoint radar_data;
-  radar_data.set(5678, DataPointType::RADAR, radar_v);
 
-  VectorXd state_v(4);
-  state_v << 1.2, 2.5, 7.0, 1.0; 
-  DataPoint state_data(1234, DataPointType::STATE, state_v);
 
-  cout << "lidar data" << endl;
-  lidar_data.print();
 
-  cout << "radar data" << endl;
-  radar_data.print();
 
-  cout << "state data" << endl;
-  state_data.print();
-  
-  cout << "lidar data" << endl;
-  cout << lidar_data.get() << endl;
 
-  cout << "radar data" << endl;
-  cout << radar_data.get() << endl;
 
-  cout << "state data" << endl;
-  cout << state_data.get() << endl;
-}
+
