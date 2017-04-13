@@ -120,5 +120,11 @@ int main(int argc, char* argv[]) {
     ground_truths.push_back(truth);
   }
 
+  /*******************************************************************
+   * CALCULATE ROOT MEAN SQUARE ERROR
+   *******************************************************************/
+   VectorXd RMSE = calculate_RMSE(estimations, ground_truths);
+   cout << RMSE << endl;
+   
 
 
