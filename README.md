@@ -42,15 +42,15 @@ and you want to make an educated guess about what the system is going to do next
 - Please check the following images for proof
 - [Terminal Output](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output.png)
 - this is for ax, ay = 5, 5 with the following specs:
--- First run: Used data-1.txt, with my own measurement covariances matrices
--- 2nd run: Used data-2.txt, with my own measurement covariances matrices
--- 3rd run: Used data-1.txt, with my Udacity's measurement covariances matrices
--- 4th run: Used data-2.txt, with my Udacity's measurement covariances matrices
+- - First run: Used data-1.txt, with my own measurement covariances matrices
+- - 2nd run: Used data-2.txt, with my own measurement covariances matrices
+- - 3rd run: Used data-1.txt, with my Udacity's measurement covariances matrices
+- - 4th run: Used data-2.txt, with my Udacity's measurement covariances matrices
 - [Terminal Output-2](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output-2.png)
--- First run: Used data-1.txt, with my own measurement covariances matrices
--- 2nd run: Used data-2.txt, with my own measurement covariances matrices
--- 3rd run: Used data-1.txt, with my Udacity's measurement covariances matrices
--- 4th run: Used data-2.txt, with my Udacity's measurement covariances matrices
+- - First run: Used data-1.txt, with my own measurement covariances matrices
+- - 2nd run: Used data-2.txt, with my own measurement covariances matrices
+- - 3rd run: Used data-1.txt, with my Udacity's measurement covariances matrices
+- - 4th run: Used data-2.txt, with my Udacity's measurement covariances matrices
 3. CHECK: The general sensor fusion algorithm flow as taught in the lessons must be used
 - Please check ```line 76 to 112``` of the following file to see methods ```process()``` and ```update()```
 - [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
