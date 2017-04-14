@@ -24,7 +24,7 @@ and you want to make an educated guess about what the system is going to do next
 # IMPORTANT NOTES FOR REVIEWER
 - Please check the PDF in the `docs` folder for important findings and explanations
 - [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
-- [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
+- [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization-B.pdf)
 
 - Please also check the rubric checklist before for additional information 
 - NOTE: this code is written from scratch
