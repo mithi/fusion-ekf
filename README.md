@@ -19,7 +19,7 @@ and you want to make an educated guess about what the system is going to do next
 # Table of Contents
 - Dependencies
 - Basic Usage
-- IMPORTANT NOTES FOR REVIEWER
+- Notes
 
 -----
 
@@ -106,13 +106,13 @@ Example:
 43.2222 2.65959 0.931181  23.2469 4.29136 0.215312  2.28434 0.226323
 ```
 
-# IMPORTANT NOTES FOR REVIEWER
+# Notes
 - Please check the PDF in the `docs` folder for important findings and explanations
 - [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
 - [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization-B.pdf) 
 - NOTE: this code is written from scratch
 - The file structure suggested and [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project) is **not** used 
-
+![Reviewer Suggestion](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/reviewer_feedback.png)
 
 -----
 
