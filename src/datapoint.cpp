@@ -4,11 +4,9 @@ DataPoint::DataPoint(){
   this->initialized = false;
 }
 
-
 DataPoint:: DataPoint(const long timestamp, const DataPointType data_type, const VectorXd raw){
   this->set(timestamp, data_type, raw);
 }
-
 
 void DataPoint::set(const long timestamp, const DataPointType data_type, const VectorXd raw){
   this->timestamp = timestamp;
@@ -17,11 +15,9 @@ void DataPoint::set(const long timestamp, const DataPointType data_type, const V
   this->initialized = true;
 }
 
-
 VectorXd DataPoint::get() const{
   return this->raw;
 }
-
 
 VectorXd DataPoint::get_state() const{
 
@@ -45,7 +41,6 @@ VectorXd DataPoint::get_state() const{
 
   return state;
 }
-
 
 long long DataPoint::get_timestamp() const{
   return this->timestamp;

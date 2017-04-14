@@ -23,7 +23,6 @@ VectorXd convert_cartesian_to_polar(const VectorXd v){
   return polar_vec;
 }
 
-
 VectorXd convert_polar_to_cartesian(const VectorXd v){
 
   VectorXd cartesian_vec(4);
@@ -40,7 +39,6 @@ VectorXd convert_polar_to_cartesian(const VectorXd v){
 
   return cartesian_vec;
 }
-
 
 MatrixXd calculate_jacobian(const VectorXd &v){
 
@@ -72,7 +70,6 @@ MatrixXd calculate_jacobian(const VectorXd &v){
 
   return H;
 }
-
 
 VectorXd calculate_RMSE(const vector<VectorXd> &estimations, const vector<VectorXd> &ground_truths){
 

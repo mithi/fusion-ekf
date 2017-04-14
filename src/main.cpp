@@ -70,7 +70,6 @@ int main(int argc, char* argv[]) {
       VectorXd radar_vec(3);
       radar_vec << val1, val2, val3;
       sensor_data.set(timestamp, DataPointType::RADAR, radar_vec);
-
     }
 
     iss >> x;
@@ -84,7 +83,6 @@ int main(int argc, char* argv[]) {
 
     all_sensor_data.push_back(sensor_data);
     all_truth_data.push_back(truth_data);
-
   }
 
   /*******************************************************************
