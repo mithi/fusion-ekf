@@ -99,7 +99,6 @@ void FusionEKF::update(const DataPoint data){
     H = this->lidar_H;
     Hx = this->lidar_H * x;
     R = this->lidar_R;
-
   }
 
   this->KF.update(z, H, Hx, R);
