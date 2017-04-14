@@ -12,8 +12,7 @@ and you want to make an educated guess about what the system is going to do next
 - NOTE: We are assuming a **constant velocity model (CV)** for this particular system
 
 **This extended kalman filter does just that.** 
-- NOTE: You can also check my (almost the same) implementation in Python and Jupyter Notebook below:
-- [Fusion-EKF-Python](https://github.com/mithi/Fusion-EKF-Python)
+
 
 -----
 # Table of Contents
@@ -111,6 +110,8 @@ Example:
 - The process 2d noise `ax` and `ay` used to update the process covariance matrix `Q` is hard-coded in `line 17-18` of [headers/fusionekf.h](https://github.com/mithi/Fusion-EKF-CPP/blob/master/headers/fusionekf.h). Change and recompile as necessary.
 
 # Notes
+- NOTE: You can also check my (almost the same) implementation in Python and Jupyter Notebook below:
+- [Fusion-EKF-Python](https://github.com/mithi/Fusion-EKF-Python)
 - Please check the PDF in the `docs` folder for important findings and explanations
 - [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
 - [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization-B.pdf) 
