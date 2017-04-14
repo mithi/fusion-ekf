@@ -112,7 +112,7 @@ Example:
 - [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
 - [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization-B.pdf)
 
-- Please also check the rubric checklist before for additional information 
+- Please also check the rubric checklist below this section for additional information 
 - NOTE: this code is written from scratch
 - The file structure suggested and starter code by Udacity is *not* used
 - [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)
