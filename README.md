@@ -114,7 +114,7 @@ Example:
 
 - Please also check the rubric checklist below this section for additional information 
 - NOTE: this code is written from scratch
-- The file structure suggested and [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)is **not** used 
+- The file structure suggested and [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project) is **not** used 
 
 
 -----
@@ -149,7 +149,7 @@ Example:
 - ```lines 45 to 74``` of [src/tools.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/tools.cpp)
 - ```lines 16 to 37 and 92 to 105``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
 7. CHECK: The algorithm should avoid unnecessary calculations
-- Yes I think I did this. 
+- Yes, I think I did this. 
 
 ---
 
