@@ -70,7 +70,7 @@ $cd build
 $CC=gcc-6 cmake .. && make
 ```
 
-- To execute inside `build` folder use the following format: 
+- To execute inside the `build` folder use the following format: 
 
 ```
 $./extendedKF /PATH/TO/INPUT/FILE /PATH/TO/OUTPUT/FILE
