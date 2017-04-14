@@ -11,6 +11,7 @@ and you want to make an educated guess about what the system is going to do next
 - In essence: the position and velocity of the system in cartesian coordinates: `(x, y, vx, vy)`
 
 **This extended kalman filter does just that.** 
+
 -----
 # Table of Contents
 - IMPORTANT NOTES FOR REVIEWER
@@ -25,7 +26,7 @@ and you want to make an educated guess about what the system is going to do next
 - [Variance improvement and visualizations PDF](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
 - Please also check the rubric checklist before for additional information 
 - NOTE: this code is written from scratch
-- The file structure suggested and starter code by udacity is *not* used
+- The file structure suggested and starter code by Udacity is *not* used
 - [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)
 - NOTE: You can also check my (almost the same) implementation in Python and Jupyter Notebook below:
 - [Fusion-EKF-Python](https://github.com/mithi/Fusion-EKF-Python)
