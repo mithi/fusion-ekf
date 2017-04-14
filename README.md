@@ -12,64 +12,17 @@ and you want to make an educated guess about what the system is going to do next
 - Note that we are assuming a **constant velocity model (CV)** for this particular system
 
 **This extended kalman filter does just that.** 
-
------
-# Table of Contents
-- IMPORTANT NOTES FOR REVIEWER
-- RUBRIC CHECK LIST
-- Dependencies
-- Basic Usage
-
------
-
-# IMPORTANT NOTES FOR REVIEWER
-- Please check the PDF in the `docs` folder for important findings and explanations
-- [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
-- [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization-B.pdf)
-
-- Please also check the rubric checklist before for additional information 
-- NOTE: this code is written from scratch
-- The file structure suggested and starter code by Udacity is *not* used
-- [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)
 - NOTE: You can also check my (almost the same) implementation in Python and Jupyter Notebook below:
 - [Fusion-EKF-Python](https://github.com/mithi/Fusion-EKF-Python)
 
 -----
+# Table of Contents
+- Dependencies
+- Basic Usage
+- IMPORTANT NOTES FOR REVIEWER
+- RUBRIC CHECK LIST
 
-# RUBRIC CHECK LIST
-1. CHECK: Code must compile 
-- Please take a look at [CMakeLists.txt](https://github.com/mithi/Fusion-EKF-CPP/blob/master/CMakeLists.txt)
-2. CHECK: The required RMSE for the two provided data sets must be met
-- Please check the following images for proof
-- [Terminal Output](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output.png)
-- this is for `ax, ay = 5, 5` with the following specs:
-- - First run: Used `data-1.txt`, with my own measurement covariances matrices
-- - 2nd run: Used `data-2.txt`, with my own measurement covariances matrices
-- - 3rd run: Used `data-1.txt`, with my Udacity's measurement covariances matrices
-- - 4th run: Used `data-2.txt`, with my Udacity's measurement covariances matrices
-- [Terminal Output-2](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output-2.png)
-- this is for `ax, ay = 9, 9` with the following specs:
-- - First run: Used `data-1.txt`, with my own measurement covariances matrices
-- - 2nd run: Used `data-2.txt`, with my own measurement covariances matrices
-- - 3rd run: Used `data-1.txt`, with my Udacity's measurement covariances matrices
-- - 4th run: Used `data-2.txt`, with my Udacity's measurement covariances matrices
-3. CHECK: The general sensor fusion algorithm flow as taught in the lessons must be used
-- Please check ```line 76 to 112``` of the following file...
-- to see methods ```process()``` and ```update()``` [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
-4. CHECK: The algorithm handles the first measurement correctly
-- Please check ```line 68 to 74``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
-5. CHECK: The algorithm predicts before updating
-- Please check ```line 83 and 107``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
-6. CHECK: The algorithm handles radar and lidar measurements correctly 
-- Please check the following lines of the following files:
-- ```lines 26 to 47``` of [src/datapoint.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/datapoint.cpp)
-- ```lines 3 to 42``` of [src/tools.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/tools.cpp)
-- ```lines 45 to 74``` of [src/tools.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/tools.cpp)
-- ```lines 16 to 37 and 92 to 105``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
-7. CHECK: The algorithm should avoid unnecessary calculations
-- Yes I think I did this. 
-
----
+-----
 
 # Dependencies
 This project was tested on a Macbook Pro with **Mac0S Sierra 10.12.4** with the following:
@@ -154,5 +107,52 @@ Example:
 43.2222 2.65959 0.931181  23.2469 4.29136 0.215312  2.28434 0.226323
 ```
 
+# IMPORTANT NOTES FOR REVIEWER
+- Please check the PDF in the `docs` folder for important findings and explanations
+- [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
+- [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization-B.pdf)
+
+- Please also check the rubric checklist before for additional information 
+- NOTE: this code is written from scratch
+- The file structure suggested and starter code by Udacity is *not* used
+- [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)
+
+
+-----
+
+# RUBRIC CHECK LIST
+1. CHECK: Code must compile 
+- Please take a look at [CMakeLists.txt](https://github.com/mithi/Fusion-EKF-CPP/blob/master/CMakeLists.txt)
+2. CHECK: The required RMSE for the two provided data sets must be met
+- Please check the following images for proof
+- [Terminal Output](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output.png)
+- this is for `ax, ay = 5, 5` with the following specs:
+- - First run: Used `data-1.txt`, with my own measurement covariances matrices
+- - 2nd run: Used `data-2.txt`, with my own measurement covariances matrices
+- - 3rd run: Used `data-1.txt`, with my Udacity's measurement covariances matrices
+- - 4th run: Used `data-2.txt`, with my Udacity's measurement covariances matrices
+- [Terminal Output-2](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output-2.png)
+- this is for `ax, ay = 9, 9` with the following specs:
+- - First run: Used `data-1.txt`, with my own measurement covariances matrices
+- - 2nd run: Used `data-2.txt`, with my own measurement covariances matrices
+- - 3rd run: Used `data-1.txt`, with my Udacity's measurement covariances matrices
+- - 4th run: Used `data-2.txt`, with my Udacity's measurement covariances matrices
+3. CHECK: The general sensor fusion algorithm flow as taught in the lessons must be used
+- Please check ```line 76 to 112``` of the following file...
+- to see methods ```process()``` and ```update()``` [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
+4. CHECK: The algorithm handles the first measurement correctly
+- Please check ```line 68 to 74``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
+5. CHECK: The algorithm predicts before updating
+- Please check ```line 83 and 107``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
+6. CHECK: The algorithm handles radar and lidar measurements correctly 
+- Please check the following lines of the following files:
+- ```lines 26 to 47``` of [src/datapoint.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/datapoint.cpp)
+- ```lines 3 to 42``` of [src/tools.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/tools.cpp)
+- ```lines 45 to 74``` of [src/tools.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/tools.cpp)
+- ```lines 16 to 37 and 92 to 105``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
+7. CHECK: The algorithm should avoid unnecessary calculations
+- Yes I think I did this. 
+
+---
 
 
