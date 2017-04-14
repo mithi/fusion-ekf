@@ -128,14 +128,14 @@ Example:
 - this is for `ax, ay = 5, 5` with the following specs:
 - - First run: Used `data-1.txt`, with my own measurement covariances matrices
 - - 2nd run: Used `data-2.txt`, with my own measurement covariances matrices
-- - 3rd run: Used `data-1.txt`, with my Udacity's measurement covariances matrices
-- - 4th run: Used `data-2.txt`, with my Udacity's measurement covariances matrices
+- - 3rd run: Used `data-1.txt`, with Udacity's measurement covariances matrices
+- - 4th run: Used `data-2.txt`, with Udacity's measurement covariances matrices
 - [Terminal Output-2](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output-2.png)
 - this is for `ax, ay = 9, 9` with the following specs:
 - - First run: Used `data-1.txt`, with my own measurement covariances matrices
 - - 2nd run: Used `data-2.txt`, with my own measurement covariances matrices
-- - 3rd run: Used `data-1.txt`, with my Udacity's measurement covariances matrices
-- - 4th run: Used `data-2.txt`, with my Udacity's measurement covariances matrices
+- - 3rd run: Used `data-1.txt`, with Udacity's measurement covariances matrices
+- - 4th run: Used `data-2.txt`, with Udacity's measurement covariances matrices
 3. CHECK: The general sensor fusion algorithm flow as taught in the lessons must be used
 - Please check ```line 76 to 112``` of the following file: [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
 4. CHECK: The algorithm handles the first measurement correctly
