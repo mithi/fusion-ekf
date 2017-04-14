@@ -114,8 +114,7 @@ Example:
 
 - Please also check the rubric checklist below this section for additional information 
 - NOTE: this code is written from scratch
-- The file structure suggested and starter code by Udacity is *not* used
-- [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)
+- The file structure suggested and starter code by Udacity is **not** used [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)
 
 
 -----
