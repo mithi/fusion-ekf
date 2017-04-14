@@ -1,6 +1,6 @@
 # Introduction
 This is an extended Kalman Filter implementation in C++ for fusing lidar and radar sensor measurements.
-A Kalman filter can be used anywhere you have uncertain information about some dynamic system, 
+A Kalman filter can be used anywhere where you have uncertain information about some dynamic system, 
 and you want to make an educated guess about what the system is going to do next. 
 
 **In this case, we have two 'noisy' sensors:**
