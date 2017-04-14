@@ -9,7 +9,7 @@ and you want to make an educated guess about what the system is going to do next
 
 **We want to predict our position, and how fast we are going in what direction at any point in time:**
 - In essence: the position and velocity of the system in cartesian coordinates: `(x, y, vx, vy)`
-- Note that we are assuming a **constant velocity model (CV)** for this particular system
+- NOTE: We are assuming a **constant velocity model (CV)** for this particular system
 
 **This extended kalman filter does just that.** 
 - NOTE: You can also check my (almost the same) implementation in Python and Jupyter Notebook below:
@@ -105,6 +105,10 @@ Example:
 4.53271 0.279 -0.842172 53.1339 4.29136 0.215312  2.28434 0.226323
 43.2222 2.65959 0.931181  23.2469 4.29136 0.215312  2.28434 0.226323
 ```
+
+- The measurement covariance matrices `lidar_R` and `radar_R` are hard-coded in `line 16-21` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp). Change and recompile as necessary. 
+- The initial state covariance matrix `P` is hard-coded in `line 36-39` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp). Change and recompile as necessary. 
+- The process 2d noise `ax` and `ay` used to update the process covariance matrix `Q` is hard-coded in `line 17-18` of [headers/fusionekf.h](https://github.com/mithi/Fusion-EKF-CPP/blob/master/headers/fusionekf.h). Change and recompile as necessary.
 
 # Notes
 - Please check the PDF in the `docs` folder for important findings and explanations
