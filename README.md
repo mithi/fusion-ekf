@@ -38,7 +38,7 @@ $xcode-select --install
 
 - Install homebrew if you haven't yet
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 - Install make 
