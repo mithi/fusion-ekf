@@ -14,8 +14,8 @@ class FusionEKF{
     const int n = 4;
     const int lidar_n = 2;
     const int radar_n = 3;
-    const double ax = 5.0;
-    const double ay = 5.0;
+    const double ax = 9.0; //5.0
+    const double ay = 9.0; //5.0
     bool initialized;
     long long timestamp;
     MatrixXd P;
