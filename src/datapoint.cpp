@@ -28,7 +28,6 @@ VectorXd DataPoint::get_state() const{
     double x = this->raw(0);
     double y = this->raw(1);
     state << x, y, 0.0, 0.0;
-    return state;
 
   } else if (this->data_type == DataPointType::RADAR){
 
