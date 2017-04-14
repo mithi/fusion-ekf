@@ -14,7 +14,8 @@ and you want to make an educated guess about what the system is going to do next
 
 -----
 # IMPORTANT NOTES FOR REVIEWER
-- Please check PDF in the `docs` folder for important findings and explanations
+- Please check the PDF in the `docs` folder for important findings and explanations
+- [variance improvement and visualizations](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
 - Please also check the rubric checklist before for additional information 
 - NOTE: this code is written from scratch
 - The file structure suggested and starter code by udacity is *not* used
