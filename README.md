@@ -93,7 +93,7 @@ R 8.60363 0.0290616 -2.99903  1477010443399637  8.6 0.25  -3.00029  0
 L 8.45  0.25  1477010443349642  8.45  0.25  -3.00027  0 
 ```
 
-- The program outputs the predictions in the following format in your input file
+- The program outputs the predictions in the following format on the output file path you specified
 ```
 [p_x] [p_y] [p_vx] [p_vy] [m_x] [m_y] [r_px] [r_py] [r_vx] [r_vy]
 
