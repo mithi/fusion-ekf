@@ -23,7 +23,9 @@ and you want to make an educated guess about what the system is going to do next
 
 # IMPORTANT NOTES FOR REVIEWER
 - Please check the PDF in the `docs` folder for important findings and explanations
-- [Variance improvement and visualizations PDF](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
+- [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
+- [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
+
 - Please also check the rubric checklist before for additional information 
 - NOTE: this code is written from scratch
 - The file structure suggested and starter code by Udacity is *not* used
@@ -39,8 +41,16 @@ and you want to make an educated guess about what the system is going to do next
 2. CHECK: The required RMSE for the two provided data sets must be met
 - Please check the following images for proof
 - [Terminal Output](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output.png)
-- [Settings Measurement Covariances by me ](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Settings-A.png)
-- [Settings Measurement Covariances by Udacity](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Settings-B.png)
+- this is for ax, ay = 5, 5 with the following specs:
+-- First run: Used data-1.txt, with my own measurement covariances matrices
+-- 2nd run: Used data-2.txt, with my own measurement covariances matrices
+-- 3rd run: Used data-1.txt, with my Udacity's measurement covariances matrices
+-- 4th run: Used data-2.txt, with my Udacity's measurement covariances matrices
+- [Terminal Output-2](https://github.com/mithi/Fusion-EKF-CPP/blob/master/images/Terminal-Output-2.png)
+-- First run: Used data-1.txt, with my own measurement covariances matrices
+-- 2nd run: Used data-2.txt, with my own measurement covariances matrices
+-- 3rd run: Used data-1.txt, with my Udacity's measurement covariances matrices
+-- 4th run: Used data-2.txt, with my Udacity's measurement covariances matrices
 3. CHECK: The general sensor fusion algorithm flow as taught in the lessons must be used
 - Please check ```line 76 to 112``` of the following file to see methods ```process()``` and ```update()```
 - [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
