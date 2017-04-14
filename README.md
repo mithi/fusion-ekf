@@ -137,8 +137,7 @@ Example:
 - - 3rd run: Used `data-1.txt`, with my Udacity's measurement covariances matrices
 - - 4th run: Used `data-2.txt`, with my Udacity's measurement covariances matrices
 3. CHECK: The general sensor fusion algorithm flow as taught in the lessons must be used
-- Please check ```line 76 to 112``` of the following file...
-- to see methods ```process()``` and ```update()``` [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
+- Please check ```line 76 to 112``` of the following file: [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
 4. CHECK: The algorithm handles the first measurement correctly
 - Please check ```line 68 to 74``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
 5. CHECK: The algorithm predicts before updating
