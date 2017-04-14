@@ -64,7 +64,6 @@ void print_EKF_data(const VectorXd &RMSE, const vector<VectorXd> &estimations,
       cout << setw(10) << left << radar_v(0) << " | ";
       cout << setw(10) << left << radar_v(1) << " | ";
       cout << setw(10) << left << radar_v(2) << " | " << endl;
-
     }
 
     cout << setw(15) << left << "PREDICTION:" << " | ";
