@@ -74,7 +74,7 @@ $CC=gcc-6 cmake .. && make
 
 ```
 $./extendedKF /PATH/TO/INPUT/FILE /PATH/TO/OUTPUT/FILE
-$ ./ExtendedKF ../data/data-1.txt ../data/out-1.txt
+$./ExtendedKF ../data/data-1.txt ../data/out-1.txt
 ```
 
 - Please use the following format for your input file
