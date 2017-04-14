@@ -12,7 +12,6 @@ FusionEKF::FusionEKF(){
   this->F = MatrixXd::Identity(this->n, this->n);
   this->Q = MatrixXd::Zero(this->n, this->n);
 
-
 /********/
   this->lidar_R << 0.0225, 0,
                    0, 0.0225;
