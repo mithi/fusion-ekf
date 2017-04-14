@@ -51,7 +51,7 @@ $brew install homebrew/dupes/make --with-default-names
 $brew install cmake
 ```
 
-- check if you've have the correct version or higher 
+- Check if you have the correct version or higher 
 ```
 $gcc-6 --version
 $make --version
