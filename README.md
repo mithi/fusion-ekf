@@ -33,48 +33,48 @@ This project was tested on a Macbook Pro with **Mac0S Sierra 10.12.4** with the 
 ### Here's a sample recipe:
 - Install xcode and xcode command line tools, if you haven't yet
 ```
-$xcode-select --install
+$ xcode-select --install
 ```
 
 - Install homebrew if you haven't yet
 ```
-$ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 - Install make 
 ```
-$brew install homebrew/dupes/make --with-default-names
+$ brew install homebrew/dupes/make --with-default-names
 ```
 
 - Install cmake 
 ```
-$brew install cmake
+$ brew install cmake
 ```
 
 - Check if you have the correct version or higher 
 ```
-$gcc-6 --version
-$make --version
-$cmake --version
+$ gcc-6 --version
+$ make --version
+$ cmake --version
 ```
 
 -----
 # Basic Usage
 - Clone this repository 
 ```
-$git clone https://github.com/mithi/Fusion-EKF-CPP/
+$ git clone https://github.com/mithi/Fusion-EKF-CPP/
 ```
 - Go inside the `build` folder and compile: 
 ```
-$cd build
-$CC=gcc-6 cmake .. && make
+$ cd build
+$ CC=gcc-6 cmake .. && make
 ```
 
 - To execute inside the `build` folder use the following format: 
 
 ```
-$./extendedKF /PATH/TO/INPUT/FILE /PATH/TO/OUTPUT/FILE
-$./ExtendedKF ../data/data-1.txt ../data/out-1.txt
+$ ./extendedKF /PATH/TO/INPUT/FILE /PATH/TO/OUTPUT/FILE
+$ ./ExtendedKF ../data/data-1.txt ../data/out-1.txt
 ```
 
 - Please use the following format for your input file
