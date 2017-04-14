@@ -11,18 +11,27 @@ and you want to make an educated guess about what the system is going to do next
 - In essence: the position and velocity of the system in cartesian coordinates: `(x, y, vx, vy)`
 
 **This extended kalman filter does just that.** 
+-----
+# Table of Contents
+- IMPORTANT NOTES FOR REVIEWER
+- RUBRIC CHECK LIST
+- Dependencies
+- Basic Usage
 
 -----
+
 # IMPORTANT NOTES FOR REVIEWER
 - Please check the PDF in the `docs` folder for important findings and explanations
-- [variance improvement and visualizations](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
+- [Variance improvement and visualizations PDF](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
 - Please also check the rubric checklist before for additional information 
 - NOTE: this code is written from scratch
 - The file structure suggested and starter code by udacity is *not* used
 - [Udacity starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project)
-- NOTE: You can also check my (almost) the same implementation in Python and Jupyter Notebook below:
+- NOTE: You can also check my (almost the same) implementation in Python and Jupyter Notebook below:
 - [Fusion-EKF-Python](https://github.com/mithi/Fusion-EKF-Python)
+
 -----
+
 # RUBRIC CHECK LIST
 1. CHECK: Code must compile 
 - Please take a look at [CMakeLists.txt](https://github.com/mithi/Fusion-EKF-CPP/blob/master/CMakeLists.txt)
@@ -46,11 +55,8 @@ and you want to make an educated guess about what the system is going to do next
 - ```lines 16 to 37 and 92 to 105``` of [src/fusionekf.cpp](https://github.com/mithi/Fusion-EKF-CPP/blob/master/src/fusionekf.cpp)
 7. CHECK: The algorithm should avoid unnecessary calculations
 - Yes I think I did this. 
------
-# Table of Contents
-- Dependencies
-- Basic Usage
------
+
+---
 
 # Dependencies
 This project was tested on a Macbook Pro with **Mac0S Sierra 10.12.4** with the following:
