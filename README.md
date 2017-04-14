@@ -9,6 +9,7 @@ and you want to make an educated guess about what the system is going to do next
 
 **We want to predict our position, and how fast we are going in what direction at any point in time:**
 - In essence: the position and velocity of the system in cartesian coordinates: `(x, y, vx, vy)`
+- Note that we are assuming constant velocity model (CV) for this particular system
 
 **This extended kalman filter does just that.** 
 
