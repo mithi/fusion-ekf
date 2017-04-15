@@ -24,7 +24,7 @@ class DataPoint{
 
   public:
     DataPoint();
-    DataPoint(const long timestamp, const DataPointType data_type, const VectorXd raw);
+    DataPoint(const long long timestamp, const DataPointType data_type, const VectorXd raw);
     void set(long timestamp, const DataPointType data_type, const VectorXd raw);
     VectorXd get() const;
     VectorXd get_state() const;
