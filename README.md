@@ -93,7 +93,7 @@ L 8.45  0.25  1477010443349642  8.45  0.25  -3.00027  0
 
 - The program outputs the predictions in the following format on the output file path you specified
 ```
-[p_x] [p_y] [p_vx] [p_vy] [m_x] [m_y] [r_px] [r_py] [r_vx] [r_vy]
+p_x p_y p_vx p_vy m_x m_y r_px r_py r_vx r_vy
 
 Where:
 (p_x, p_y, p_vx, p_vy) - the predicted state of the system by FusionEKF
@@ -110,13 +110,12 @@ Example:
 - The process 2d noise `ax` and `ay` used to update the process covariance matrix `Q` is hard-coded in `line 17-18` of [headers/fusionekf.h](https://github.com/mithi/Fusion-EKF-CPP/blob/master/headers/fusionekf.h). Change and recompile as necessary.
 
 # Notes
-- NOTE: You can also check my (almost the same) implementation in Python and Jupyter Notebook below:
+- Here's my (almost the same) implementation in Python and Jupyter Notebook below:
 - [Fusion-EKF-Python](https://github.com/mithi/Fusion-EKF-Python)
 - Please check the PDF in the `docs` folder for important findings and explanations
 - [Variance improvement and visualizations PDF (ax, ay = 5, 5)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization.pdf)
 - [Variance improvement and visualizations PDF 2 (ax, ay = 9, 9)](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/FusionEKF-variances-visualization-B.pdf) 
-- NOTE: this code is written from scratch
-- The file structure suggested and [starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project) by Udacity are **NOT** used 
+- This code is written from scratch; he file structure suggested and [starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project) by Udacity are **NOT** used 
 ![Reviewer Suggestion](https://github.com/mithi/Fusion-EKF-CPP/blob/master/docs/reviewer_feedback.png)
 
 -----
