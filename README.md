@@ -77,12 +77,12 @@ $ ./ExtendedKF ../data/data-1.txt ../data/out-1.txt
 
 - Please use the following format for your input file
 ```
-[L(for lidar)] [m_x] [m_y] [t] [r_x] [r_y] [r_vx] [r_vy]
-[R(for radar)] [m_rho] [m_phi] [m_drho] [t] [r_px] [r_py] [r_vx] [r_vy]
+L(for lidar) m_x m_y t r_x r_y r_vx r_vy
+R(for radar) m_rho m_phi m_drho t r_px r_py r_vx r_vy
 
 Where:
 (m_x, m_y) - measurements by the lidar
-(m_rho, m_phi, m_dho) - measurements by the radar in polar coordinates
+(m_rho, m_phi, m_drho) - measurements by the radar in polar coordinates
 (t) - timestamp in unix/epoch time the measurements were taken
 (r_x, r_y, r_vx, r_vy) - the real ground truth state of the system
 
