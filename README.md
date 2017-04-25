@@ -5,7 +5,7 @@ and you want to make an educated guess about what the system is going to do next
 
 **In this case, we have two 'noisy' sensors:**
 - A lidar sensor that measures our position in cartesian-coordinates `(x, y)`
-- A radar sensor that measures our position and velocity in polar coordinates `(rho, phi, drho)`
+- A radar sensor that measures our position and relative velocity (the velocity within line of sight) in polar coordinates `(rho, phi, drho)`
 
 **We want to predict our position, and how fast we are going in what direction at any point in time:**
 - In essence: the position and velocity of the system in cartesian coordinates: `(x, y, vx, vy)`
