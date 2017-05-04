@@ -30,10 +30,10 @@ void KalmanFilter::predict(){
 
 void KalmanFilter::update(const VectorXd &z, const MatrixXd &H, const VectorXd &Hx, const MatrixXd &R){
 
-  MatrixXd PHt = this->P * H.transpose();
+  const MatrixXd PHt = this->P * H.transpose();
+  const MatrixXd S = H * PHt + R;
+  const MatrixXd K = PHt * S.inverse();
   VectorXd y = z - Hx;
-  MatrixXd S = H * PHt + R;
-  MatrixXd K = PHt * S.inverse();
 
   this->x = this->x + K * y;
   this->P = (this->I - K * H) * this->P;
