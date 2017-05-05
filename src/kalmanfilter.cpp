@@ -35,6 +35,10 @@ void KalmanFilter::update(const VectorXd &z, const MatrixXd &H, const VectorXd &
   const MatrixXd K = PHt * S.inverse();
   VectorXd y = z - Hx;
 
+  //normalize angle
+  double a = y(1);
+  y(1) = atan2(sin(a), cos(a));
+
   this->x = this->x + K * y;
   this->P = (this->I - K * H) * this->P;
 }
