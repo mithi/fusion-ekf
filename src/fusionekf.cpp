@@ -30,18 +30,18 @@ FusionEKF::FusionEKF(){
 
 void FusionEKF::updateQ(double dt){
 
-  double dt2 = dt * dt;
-  double dt3 = dt * dt2;
-  double dt4 = dt * dt3;
+  const double dt2 = dt * dt;
+  const double dt3 = dt * dt2;
+  const double dt4 = dt * dt3;
 
-  double r11 = dt4 * this->ax / 4;
-  double r13 = dt3 * this->ax / 2;
-  double r22 = dt4 * this->ay / 4;
-  double r24 = dt3 * this->ay / 2;
-  double r31 = dt3 * this->ax / 2;
-  double r33 = dt2 * this->ax;
-  double r42 = dt3 * this->ay / 2;
-  double r44 = dt2 * this->ay;
+  const double r11 = dt4 * this->ax / 4;
+  const double r13 = dt3 * this->ax / 2;
+  const double r22 = dt4 * this->ay / 4;
+  const double r24 = dt3 * this->ay / 2;
+  const double r31 = dt3 * this->ax / 2;
+  const double r33 = dt2 * this->ax;
+  const double r42 = dt3 * this->ay / 2;
+  const double r44 = dt2 * this->ay;
 
   this->Q << r11, 0.0, r13, 0.0,
              0.0, r22, 0.0, r24,
@@ -61,15 +61,15 @@ void FusionEKF::start(const DataPoint data){
 
 void FusionEKF::update(const DataPoint data){
 
-  double dt = (double(data.get_timestamp()) - double(this->timestamp)) / 1000000.0;
+  const double dt = (double(data.get_timestamp()) - double(this->timestamp)) / 1000000.0;
   this->timestamp = data.get_timestamp();
 
   this->updateQ(dt);
   this->KF.updateF(dt);
   this->KF.predict();
 
-  VectorXd z = data.get();
-  VectorXd x = this->KF.get();
+  const VectorXd z = data.get();
+  const VectorXd x = this->KF.get();
 
   VectorXd Hx;
   MatrixXd R;
