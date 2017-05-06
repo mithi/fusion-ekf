@@ -1,5 +1,7 @@
 #include "datapoint.h"
 
+using namespace std;
+
 DataPoint::DataPoint(){
   this->initialized = false;
 }

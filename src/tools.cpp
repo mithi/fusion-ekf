@@ -1,5 +1,7 @@
 #include "tools.h"
 
+using namespace std;
+
 VectorXd convert_cartesian_to_polar(const VectorXd v){
 
   double THRESH = 0.0001;

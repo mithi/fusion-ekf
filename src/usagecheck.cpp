@@ -1,5 +1,7 @@
 #include "usagecheck.h"
 
+using namespace std;
+
 void check_arguments(int argc, char* argv[]) {
   // make sure the user has provided input and output files
 
