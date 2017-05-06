@@ -51,7 +51,7 @@ void FusionEKF::updateQ(const double dt){
   this->KF.setQ(Q);
 }
 
-void FusionEKF::start(const DataPoint data){
+void FusionEKF::start(const DataPoint& data){
 
   this->timestamp = data.get_timestamp();
   VectorXd x = data.get_state();
@@ -59,7 +59,7 @@ void FusionEKF::start(const DataPoint data){
   this->initialized = true;
 }
 
-void FusionEKF::update(const DataPoint data){
+void FusionEKF::update(const DataPoint& data){
 
   const double dt = (double(data.get_timestamp()) - double(this->timestamp)) / 1000000.0;
   this->timestamp = data.get_timestamp();
@@ -92,7 +92,7 @@ void FusionEKF::update(const DataPoint data){
   this->KF.update(z, H, Hx, R);
 }
 
-void FusionEKF::process(const DataPoint data){
+void FusionEKF::process(const DataPoint& data){
   this->initialized ? this->update(data) : this->start(data);
 }
 
