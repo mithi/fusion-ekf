@@ -8,7 +8,6 @@
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
-using namespace std;
 
 enum class DataPointType{
   LIDAR, RADAR, STATE
