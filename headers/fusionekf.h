@@ -28,10 +28,10 @@ class FusionEKF{
 
   public:
     FusionEKF();
-    void updateQ(double dt);
-    void update(const DataPoint data);
-    void start(const DataPoint data);
-    void process(const DataPoint data);
+    void updateQ(const double dt);
+    void update(const DataPoint& data);
+    void start(const DataPoint& data);
+    void process(const DataPoint& data);
     VectorXd get() const;
 };
 
