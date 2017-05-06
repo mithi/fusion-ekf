@@ -14,7 +14,7 @@ void KalmanFilter::setQ(MatrixXd &Q){
   this->Q = Q;
 }
 
-void KalmanFilter::updateF(double dt){
+void KalmanFilter::updateF(const double dt){
   this->F(0, 2) = dt;
   this->F(1, 3) = dt;
 }
