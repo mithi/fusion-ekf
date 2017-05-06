@@ -28,7 +28,7 @@ FusionEKF::FusionEKF(){
              0, 0, 0, 1000;
 }
 
-void FusionEKF::updateQ(double dt){
+void FusionEKF::updateQ(const double dt){
 
   const double dt2 = dt * dt;
   const double dt3 = dt * dt2;
