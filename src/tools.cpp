@@ -78,7 +78,7 @@ VectorXd calculate_RMSE(const vector<VectorXd> &estimations, const vector<Vector
   VectorXd rmse(4);
   rmse << 0.0, 0.0, 0.0, 0.0;
 
-  for (int k = 0; k < estimations.size(); k++){
+  for (int k = 0; k < estimations.size(); ++k){
 
     VectorXd diff = estimations[k] - ground_truths[k];
     diff = diff.array() * diff.array();

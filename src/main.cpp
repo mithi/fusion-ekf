@@ -93,7 +93,7 @@ int main(int argc, char* argv[]) {
    vector<VectorXd> estimations;
    vector<VectorXd> ground_truths;
 
-  for (int k = 0; k < all_sensor_data.size(); k++){
+  for (int k = 0; k < all_sensor_data.size(); ++k){
 
     fusionEKF.process(all_sensor_data[k]);
 
