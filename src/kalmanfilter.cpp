@@ -1,17 +1,18 @@
 #include "kalmanfilter.h"
 
-void KalmanFilter::start(int n, VectorXd x, MatrixXd P, MatrixXd F, MatrixXd Q){
+void KalmanFilter::start(
+  const int nin, const VectorXd xin, const MatrixXd Pin, const MatrixXd Fin, const MatrixXd Qin){
 
-  this->n = n;
-  this->I = MatrixXd::Identity(n, n);
-  this->x = x;
-  this->P = P;
-  this->F = F;
-  this->Q = Q;
+  this->n = nin;
+  this->I = MatrixXd::Identity(this->n, this->n);
+  this->x = xin;
+  this->P = Pin;
+  this->F = Fin;
+  this->Q = Qin;
 }
 
-void KalmanFilter::setQ(MatrixXd& Q){
-  this->Q = Q;
+void KalmanFilter::setQ(const MatrixXd& Qin){
+  this->Q = Qin;
 }
 
 void KalmanFilter::updateF(const double dt){
