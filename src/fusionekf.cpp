@@ -59,7 +59,11 @@ void FusionEKF::start(const DataPoint& data){
   this->initialized = true;
 }
 
-void FusionEKF::update(const DataPoint& data){
+void FusionEKF::compute(const DataPoint& data){
+
+  /**************************
+   * PREDICTION STEP
+   **************************/
 
   const double dt = (data.get_timestamp() - this->timestamp) / 1.e6;
   this->timestamp = data.get_timestamp();
@@ -67,6 +71,10 @@ void FusionEKF::update(const DataPoint& data){
   this->updateQ(dt);
   this->KF.updateF(dt);
   this->KF.predict();
+
+  /**************************
+   * UPDATE STEP
+   **************************/
 
   const VectorXd z = data.get();
   const VectorXd x = this->KF.get();
@@ -93,7 +101,7 @@ void FusionEKF::update(const DataPoint& data){
 }
 
 void FusionEKF::process(const DataPoint& data){
-  this->initialized ? this->update(data) : this->start(data);
+  this->initialized ? this->compute(data) : this->start(data);
 }
 
 VectorXd FusionEKF::get() const{
