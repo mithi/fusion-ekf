@@ -61,7 +61,7 @@ void FusionEKF::start(const DataPoint& data){
 
 void FusionEKF::update(const DataPoint& data){
 
-  const double dt = (double(data.get_timestamp()) - double(this->timestamp)) / 1000000.0;
+  const double dt = (data.get_timestamp() - this->timestamp) / 1.e6;
   this->timestamp = data.get_timestamp();
 
   this->updateQ(dt);
