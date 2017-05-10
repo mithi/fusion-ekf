@@ -12,20 +12,20 @@ FusionEKF::FusionEKF(){
   this->F = MatrixXd::Identity(this->n, this->n);
   this->Q = MatrixXd::Zero(this->n, this->n);
 
-  this->lidar_R << 0.0225, 0,
-                   0, 0.0225;
+  this->lidar_R << 0.0225, 0.0,
+                   0.0, 0.0225;
 
-  this->radar_R  << 0.09, 0, 0,
-                    0, 0.0009, 0,
-                    0, 0, 0.09;
+  this->radar_R  << 0.09, 0.0, 0.0,
+                    0.0, 0.0009, 0,
+                    0.0, 0.0, 0.09;
 
   this->lidar_H << 1.0, 0.0, 0.0, 0.0,
                    0.0, 1.0, 0.0, 0.0;
 
-  this->P << 1, 0, 0, 0,
-             0, 1, 0, 0,
-             0, 0, 1000, 0,
-             0, 0, 0, 1000;
+  this->P << 1.0, 0.0, 0.0, 0.0,
+             0.0, 1.0, 0.0, 0.0,
+             0.0, 0.0, 1000.0, 0.0,
+             0.0, 0.0, 0.0, 1000;
 }
 
 void FusionEKF::updateQ(const double dt){
@@ -61,10 +61,9 @@ void FusionEKF::start(const DataPoint& data){
 
 void FusionEKF::compute(const DataPoint& data){
 
-  /**************************
+  /**************************************************************************
    * PREDICTION STEP
-   **************************/
-
+   **************************************************************************/
   const double dt = (data.get_timestamp() - this->timestamp) / 1.e6;
   this->timestamp = data.get_timestamp();
 
@@ -72,10 +71,9 @@ void FusionEKF::compute(const DataPoint& data){
   this->KF.updateF(dt);
   this->KF.predict();
 
-  /**************************
+  /**************************************************************************
    * UPDATE STEP
-   **************************/
-
+   **************************************************************************/
   const VectorXd z = data.get();
   const VectorXd x = this->KF.get();
 
