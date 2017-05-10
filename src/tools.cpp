@@ -2,7 +2,7 @@
 
 using namespace std;
 
-VectorXd convert_cartesian_to_polar(const VectorXd v){
+VectorXd convert_cartesian_to_polar(const VectorXd& v){
 
   double THRESH = 0.0001;
   VectorXd polar_vec(3);
@@ -25,7 +25,7 @@ VectorXd convert_cartesian_to_polar(const VectorXd v){
   return polar_vec;
 }
 
-VectorXd convert_polar_to_cartesian(const VectorXd v){
+VectorXd convert_polar_to_cartesian(const VectorXd& v){
 
   VectorXd cartesian_vec(4);
 
