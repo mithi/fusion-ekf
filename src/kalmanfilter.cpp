@@ -10,7 +10,7 @@ void KalmanFilter::start(int n, VectorXd x, MatrixXd P, MatrixXd F, MatrixXd Q){
   this->Q = Q;
 }
 
-void KalmanFilter::setQ(MatrixXd &Q){
+void KalmanFilter::setQ(MatrixXd& Q){
   this->Q = Q;
 }
 
@@ -28,7 +28,7 @@ void KalmanFilter::predict(){
   this->P = this->F * this->P * this->F.transpose() + this->Q;
 }
 
-void KalmanFilter::update(const VectorXd &z, const MatrixXd &H, const VectorXd &Hx, const MatrixXd &R){
+void KalmanFilter::update(const VectorXd& z, const MatrixXd& H, const VectorXd& Hx, const MatrixXd& R){
 
   const MatrixXd PHt = this->P * H.transpose();
   const MatrixXd S = H * PHt + R;

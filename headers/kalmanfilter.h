@@ -20,11 +20,11 @@ class KalmanFilter{
   public:
     KalmanFilter(){};
     void start(int n, VectorXd x, MatrixXd P, MatrixXd F, MatrixXd Q);
-    void setQ(MatrixXd &Q);
+    void setQ(MatrixXd& Q);
     void updateF(const double dt);
     VectorXd get() const;
     void predict();
-    void update(const VectorXd &z, const MatrixXd &H, const VectorXd &Hx, const MatrixXd &R);
+    void update(const VectorXd& z, const MatrixXd& H, const VectorXd& Hx, const MatrixXd& R);
 };
 
 #endif /* KALMANFILTER_H_ */
