@@ -1,7 +1,7 @@
 #include "kalmanfilter.h"
 
 void KalmanFilter::start(
-  const int nin, const VectorXd xin, const MatrixXd Pin, const MatrixXd Fin, const MatrixXd Qin){
+  const int nin, const VectorXd& xin, const MatrixXd& Pin, const MatrixXd& Fin, const MatrixXd& Qin){
 
   this->n = nin;
   this->I = MatrixXd::Identity(this->n, this->n);

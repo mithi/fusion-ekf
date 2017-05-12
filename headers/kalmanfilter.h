@@ -19,7 +19,7 @@ class KalmanFilter{
 
   public:
     KalmanFilter(){};
-    void start(const int nin, const VectorXd xin, const MatrixXd Pin, const MatrixXd Fin, const MatrixXd Qin);
+    void start(const int nin, const VectorXd& xin, const MatrixXd& Pin, const MatrixXd& Fin, const MatrixXd& Qin);
     void setQ(const MatrixXd& Qin);
     void updateF(const double dt);
     VectorXd get() const;
