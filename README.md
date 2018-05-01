@@ -1,5 +1,5 @@
 # Update
-## [Version 2 here](https://github.com/mithi/fusion-ekf-2)
+- ## [VERSION 2 - HERE](https://github.com/mithi/fusion-ekf-2)
 
 # Introduction
 This is an extended Kalman Filter implementation in C++ for fusing lidar and radar sensor measurements.
